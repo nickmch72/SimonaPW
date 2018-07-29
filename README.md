@@ -1,69 +1,52 @@
-# Hello World PhoneGap Template [![bitHound Score][bithound-img]][bithound-url]
+﻿# Simona's personal website'
 
-A PhoneGap Hello World template
+A personal website for Simona Cholakova
 
-## Usage
+## Prerequisites
 
-#### PhoneGap CLI
+You should have node and npm installed in your machine. I assume you can run the application somehow (Chrome, Firefox, etc.).
 
-The hello-world template is the default when you create a new application using the [phonegap-cli][phonegap-cli-url].
+## Preparations
 
-    phonegap create my-app
+### Installing required tools
 
-Create an app using this template specifically:
+npm install -g bower yo gulp generator-mobileangularui
+sudo npm install -g phonegap
 
-    phonegap create my-app --template hello-world
+### Scaffold the project
 
-To see a list of other available PhoneGap templates:
+phonegap create SimonsPW
+cd SimonsPW
+yo mobileangularui
 
-    phonegap template list
+### The project structure
 
-## [config.xml][config-xml]
+src
+├── html
+│   └── index.html
+├── images
+├── js
+│   ├── app.js
+│   ├── controllers
+│   │   └── main_controller.js
+│   ├── directives
+│   └── services
+├── less
+│   ├── app.less
+│   ├── mixins.less
+│   ├── responsive.less
+│   └── variables.less
+└── templates
+    ├── home.html
+    └── sidebar.html
 
-#### android-minSdkVersion (Android only)
+### Gulpfile and build process
+Before to start hacking the scaffolded sources you may wish to know what happens when you run: gulp build. Well this is an explanation of what it does:
 
-Minimum SDK version supported on the target device. Maximum version is blank by default.
+Clean www folder for *.html, fonts, js, css, images (that's why you should not code there). config.xml from Cordova is preserved.
+Copy html files from src/html folder to www root
+Copy vendor fonts to www/fonts
+Minify and copy images from src/images to www/images
+Compile and minify app.less and responsive.less. For app.less it also strips any responsive media query that wont match a screen of 0px and strip the :hover selectors (saved in a separate file), this will let you code for mobile only in app.less and support responsiveness elsewhere. This also allow to mobilize 3rd party stylesheets that are designed to be responsive and target non-touch devices too.
+Concat vendor js (including angular and default deps), src/js/**/*.js (automatically sorted according to angular dependency) and minify to www/js/app.min.js using a source map to help debugging.
 
-This template sets the minimum to `14`.
-
-    <preference name="android-minSdkVersion" value="14" />
-
-#### &lt;access ...&gt; (All)
-
-This template defaults to wide open access.
-
-    <access origin="*" />
-
-It is strongly encouraged that you restrict access to external resources in your application before releasing to production.
-
-For more information on whitelist configuration, see the [Cordova Whitelist Guide][cordova-whitelist-guide] and the [Cordova Whitelist Plugin documentation][cordova-plugin-whitelist]
-
-## [www/index.html][index-html]
-
-#### Content Security Policy (CSP)
-
-The default CSP is similarly open:
-
-    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
-
-Much like the access tag above, you are strongly encouraged to use a more restrictive CSP in production.
-
-A good starting point declaration might be:
-
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" />
-
-For more information on the Content Security Policy, see the [section on CSP in the Cordova Whitelist Plugin documentation][cordova-plugin-whitelist-csp].
-
-Another good resource for generating a good CSP declaration is [CSP is Awesome][csp-is-awesome]
-
-
-[phonegap-cli-url]: http://github.com/phonegap/phonegap-cli
-[cordova-app]: http://github.com/apache/cordova-app-hello-world
-[bithound-img]: https://www.bithound.io/github/phonegap/phonegap-app-hello-world/badges/score.svg
-[bithound-url]: https://www.bithound.io/github/phonegap/phonegap-app-hello-world
-[config-xml]: https://github.com/phonegap/phonegap-template-hello-world/blob/master/config.xml
-[index-html]: https://github.com/phonegap/phonegap-template-hello-world/blob/master/www/index.html
-[cordova-whitelist-guide]: https://cordova.apache.org/docs/en/dev/guide/appdev/whitelist/index.html
-[cordova-plugin-whitelist]: http://cordova.apache.org/docs/en/latest/reference/cordova-plugin-whitelist
-[cordova-plugin-whitelist-csp]: http://cordova.apache.org/docs/en/latest/reference/cordova-plugin-whitelist#content-security-policy
-[csp-is-awesome]: http://cspisawesome.com
