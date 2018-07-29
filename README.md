@@ -10,14 +10,14 @@ You should have node and npm installed in your machine. I assume you can run the
 
 ### Installing required tools
 
-npm install -g bower yo gulp generator-mobileangularui
-sudo npm install -g phonegap
+    npm install -g bower yo gulp generator-mobileangularui
+    sudo npm install -g phonegap
 
 ### Scaffold the project
 
-phonegap create SimonsPW
-cd SimonsPW
-yo mobileangularui
+    phonegap create SimonsPW
+    cd SimonsPW
+    yo mobileangularui
 
 ### The project structure
 
