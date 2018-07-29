@@ -22,22 +22,39 @@ yo mobileangularui
 ### The project structure
 
 src
+
 ├── html
+
 │   └── index.html
+
 ├── images
+
 ├── js
+
 │   ├── app.js
+
 │   ├── controllers
+
 │   │   └── main_controller.js
+
 │   ├── directives
+
 │   └── services
+
 ├── less
+
 │   ├── app.less
+
 │   ├── mixins.less
+
 │   ├── responsive.less
+
 │   └── variables.less
+
 └── templates
+
     ├── home.html
+    
     └── sidebar.html
 
 ### Gulpfile and build process
