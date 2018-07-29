@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2018
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{262852C6-CD72-467D-83FE-5EEB1973A190}") = "SimonaPW", "SimonaPW.jsproj", "{F9F101E5-D1AE-4D4A-B6D9-0C348D759F32}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Windows-x64 = Debug|Windows-x64
+		Release|Windows-x64 = Release|Windows-x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F9F101E5-D1AE-4D4A-B6D9-0C348D759F32}.Debug|Windows-x64.ActiveCfg = Release|Windows-x64
+		{F9F101E5-D1AE-4D4A-B6D9-0C348D759F32}.Release|Windows-x64.ActiveCfg = Release|Windows-x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E96E2B8B-F253-4368-A189-CC8AA6611BB5}
+	EndGlobalSection
+EndGlobal
