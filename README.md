@@ -21,41 +21,24 @@ yo mobileangularui
 
 ### The project structure
 
-src
-
-├── html
-
-│   └── index.html
-
-├── images
-
-├── js
-
-│   ├── app.js
-
-│   ├── controllers
-
-│   │   └── main_controller.js
-
-│   ├── directives
-
-│   └── services
-
-├── less
-
-│   ├── app.less
-
-│   ├── mixins.less
-
-│   ├── responsive.less
-
-│   └── variables.less
-
-└── templates
-
-    ├── home.html
-    
-    └── sidebar.html
+    src
+    ├── html
+    │   └── index.html
+    ├── images
+    ├── js
+    │   ├── app.js
+    │   ├── controllers
+    │   │   └── main_controller.js
+    │   ├── directives
+    │   └── services
+    ├── less
+    │   ├── app.less
+    │   ├── mixins.less
+    │   ├── responsive.less
+    │   └── variables.less
+    └── templates
+        ├── home.html
+        └── sidebar.html
 
 ### Gulpfile and build process
 Before to start hacking the scaffolded sources you may wish to know what happens when you run: gulp build. Well this is an explanation of what it does:
